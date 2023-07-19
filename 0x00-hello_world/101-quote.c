@@ -1,16 +1,16 @@
-#include <stdio.h>
+#include <unistd.h>
 
 /**
- *
  * main - Entry point
  *
  * Description: A C program that prints a sentence without printf nor puts
  *
- * Return: Always 1 (Success)
+ * Return: 1 (not success)
 */
 
 int main(void)
-{
-	fputs("and that piece of art is useful\" - Dora Korpar, 2015-10-19", stdout);
+{	char message[] = "and that piece of art is useful\" - Do\
+	ra Korpar, 2015-10-19\n";
+	write(1, message, 59);
 	return (1);
 }
