@@ -20,6 +20,10 @@ int main(void)
 			{
 				for (e = j; e <= 57; e++)
 				{
+					if (e + h == i + j)
+					{
+						continue;
+					}
 					putchar(i);
 					putchar(j);
 					putchar(' ');
