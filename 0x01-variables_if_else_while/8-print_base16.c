@@ -19,4 +19,5 @@ int main(void)
 			i += 40;
 		i++;
 	}
+	return (0);
 }
