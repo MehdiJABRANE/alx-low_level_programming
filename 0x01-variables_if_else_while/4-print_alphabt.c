@@ -1,0 +1,23 @@
+#include <stdlib.h>
+#include <time.h>
+#include <stdio.h>
+/**
+ * main - Entry point
+ *
+ * Description: A C program that prints alphabets in lowercase
+ *
+ * Return: Always 0 (Success)
+*/
+int main(void)
+{
+	int i;
+
+	for (i = 0; i < 26; i++)
+	{
+		if (i + 97 == 101 || i + 97 == 113)
+			continue;
+		putchar(i + 97);
+	}
+	putchar('\n');
+	return (0);
+}
