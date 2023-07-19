@@ -13,8 +13,8 @@ int main(void)
 	int i;
 
 	for (i = 0; i < 26; i++)
-		putchar(i + 65);
-	for (i = 0; i < 26; i++)
 		putchar(i + 97);
+	for (i = 0; i < 26; i++)
+		putchar(i + 65);
 	return (0);
 }
