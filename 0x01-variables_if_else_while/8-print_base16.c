@@ -16,8 +16,9 @@ int main(void)
 	{
 		putchar(i);
 		if (i == 57)
-			i += 40;
+			i += 39;
 		i++;
 	}
+	putchar('\n');
 	return (0);
 }
