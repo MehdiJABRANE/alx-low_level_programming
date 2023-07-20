@@ -12,9 +12,8 @@
 
 int print_last_digit(int n)
 {
-	int last_d, ab;
+	int ab;
 
-	last_d = n % 10;
 	ab = _abs(n % 10);
 	return (ab);
 }
