@@ -19,5 +19,6 @@ int main(void)
 	{
 		_putchar(sent[i]);
 	}
+	putchar('\n');
 	return (0);
 }
