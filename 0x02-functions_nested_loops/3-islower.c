@@ -4,6 +4,8 @@
 /**
  * _islower - checks if the character is lower or not
  *
+ * @c: the character that i will check
+ *
  * Return: 1 if it's lower, 0 if it's not
 */
 
