@@ -17,7 +17,7 @@ void times_table(void)
 			int operation, first_digit, second_digit;
 
 			operation = i * j;
-			if (operation == 0)
+			if (j == 0)
 			{
 				_putchar(48);
 			}
