@@ -1,16 +1,19 @@
-#include <stdio.h>
 #include "main.h"
+#include <stdio.h>
 
 /**
- * main - Entry point
+ * print_alphabet - prints all the alphabets
  *
- * Description: A C program that prints with print_alphabet
- *
- * Return: Always 0 (Success)
+ * Return: On success 1. On error -1
 */
 
-int main(void)
+void print_alphabet(void)
 {
-	print_alphabet();
-	return (0);
+	int i;
+
+	for (i = 97; i <= 122; i++)
+	{
+		_putchar(i);
+	}
+	_putchar('\n')
 }
