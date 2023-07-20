@@ -27,7 +27,7 @@ void times_table(void)
 				_putchar(' ');
 				_putchar(operation + '0');
 			}
-			if (operation > 10)
+			if (operation >= 10)
 			{
 				first_digit = operation / 10;
 				second_digit = operation % 10;
