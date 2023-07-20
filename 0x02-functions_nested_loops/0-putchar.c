@@ -11,9 +11,9 @@
 
 int main(void)
 {
-	int i, length = strlen(sent);
-
 	char sent[] = "_putchar";
+
+	int i, length = strlen(sent);
 
 	for (i = 0; i < length; i++)
 	{
