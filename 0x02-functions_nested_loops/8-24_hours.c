@@ -3,9 +3,7 @@
 #include <stdlib.h>
 
 /**
- * jack_baeur - prints every minute of the day
- *
- * Description: A C function that prints every minute of the day
+ * jack_bauer - prints every minute of the day
 */
 
 void jack_bauer(void)
