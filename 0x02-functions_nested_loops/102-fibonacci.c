@@ -20,7 +20,10 @@ int main(void)
 		sum = a + b;
 		a = b;
 		b = sum;
-		printf("%ld, ", sum);
+		if (i == 49)
+			printf("%ld\n", sum);
+		else
+			printf("%ld, ", sum);
 	}
 	return (0);
 }
