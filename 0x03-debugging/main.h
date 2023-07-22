@@ -5,5 +5,6 @@
 
 void positive_or_negative(int i);
 long int largest_number(long int a, long int b, long int c);
+void print_remaining_days(int month, int day, int year);
 
 #endif /* MAIN_H */
