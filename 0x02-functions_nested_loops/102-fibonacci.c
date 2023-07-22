@@ -10,7 +10,7 @@
 
 int main(void)
 {
-	int a, b, sum;
+	int i, a, b, sum;
 
 	a = 0;
 	b = 1;
