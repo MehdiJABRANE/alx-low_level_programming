@@ -2,9 +2,11 @@
 #include <stdio.h>
 
 /**
- * print_triangle - A function prints # as a triangle
+ * main - Entry point
  *
- * @size: the times that will # be printed
+ * Description: A C program that calculates the prime factor
+ *
+ * Return: Always 0 (Success)
 */
 
 void main(void)
