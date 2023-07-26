@@ -13,8 +13,15 @@ void rev_string(char *s)
 	int length, i;
 
 	length = strlen(s);
-	for (i = length; i >= 0; i--)
+	char e[length + 1];
+
+	for (i = 0; i < length; i++)
 	{
-		_putchar(s[i]);
+		e[i] = s[length - 1 - i];
+	}
+	e[length] = '\0';
+	for (i = 0; i < length; i++)
+	{
+		s[i] = e[i];
 	}
 }
