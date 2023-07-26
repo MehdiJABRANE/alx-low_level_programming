@@ -3,7 +3,7 @@
 #include <string.h>
 
 /**
- * _puts2 - A C function that prints a string
+ * puts2 - A C function that prints a string
  *
  * @str: the string
 */
