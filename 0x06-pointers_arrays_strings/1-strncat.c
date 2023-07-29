@@ -19,13 +19,11 @@ char *_strncat(char *dest, char *src, int n)
 	int length1, length2, i;
 
 	length1 = strlen(dest);
-	if (n <= strlen(src))
+	if (n <= (int)strlen(src))
 		length2 = strlen(src) - (strlen(src) - n);
 	else
 		length2 = strlen(src);
 	for (i = length1; i < length1 + length2; i++)
 		dest[i] = src[i - length1];
-	if (dest[strlen(dest) - 1] != '\n')
-		dest[strlen(dest)] = '\n';
 	return (dest);
 }
