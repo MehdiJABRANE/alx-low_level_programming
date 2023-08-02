@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 /**
- * _puts_rev_recursion - A C function that prints a string rev with recursion
+ * _print_rev_recursion - A C function that prints a string rev with recursion
  *
  * @s: the string
 */
