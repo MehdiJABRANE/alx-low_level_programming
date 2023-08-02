@@ -3,11 +3,11 @@
 #include <stdio.h>
 
 /**
- * _memset - A C function that puts a char in the first n of an array
+ * _memcpy - A C function that copies a char in the first n of an array
  *
- * @s: the array
+ * @dest: the array
  *
- * @b: the charater
+ * @src: the charater
  *
  * @n: the n of array
  *
@@ -20,8 +20,7 @@ char *_memcpy(char *dest, char *src, unsigned int n)
 
 	for (i = 0; i < n; i++)
 	{
-		dest[i] = b[i];
+		dest[i] = src[i];
 	}
-	s[i] = '\0';
-	return (s);
+	return (dest);
 }
