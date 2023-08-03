@@ -29,9 +29,11 @@ int is_palindrome(char *s)
 int actual_is_palindrome(char *s, int i, int j)
 {
 	if (s[i] == s[j])
+	{
 		if (j == 0)
 			return (1);
 		return (actual_is_palindrome(s, i + 1, j - 1));
+	}
 	else
 		return (0);
 }
