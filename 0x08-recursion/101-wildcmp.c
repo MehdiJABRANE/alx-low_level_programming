@@ -26,7 +26,7 @@ int actual_wildcmp(char *s1, char *s2, int i)
 {
 	if (s2[i] == '*')
 	{
-		if (j == strlen(s2))
+		if (i == strlen(s2))
 			return (1);
 		return (actual_wildcmp(s1, s2, i + 1));
 	}
