@@ -24,15 +24,18 @@ int wildcmp(char *s1, char *s2)
  */
 int actual_wildcmp(char *s1, char *s2, int i)
 {
+	int length;
+
+	length = strlen(s2);
 	if (s2[i] == '*')
 	{
-		if (i == strlen(s2))
+		if (i == length)
 			return (1);
 		return (actual_wildcmp(s1, s2, i + 1));
 	}
 	if (s1[i] == s2[i])
 	{
-		if (j == strlen(s2))
+		if (i == length)
 			return (1);
 		return (actual_wildcmp(s1, s2, i + 1));
 	}
