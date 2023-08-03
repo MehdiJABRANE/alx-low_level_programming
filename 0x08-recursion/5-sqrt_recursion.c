@@ -15,10 +15,12 @@ int _sqrt_recursion(int n)
 {
 	int squareroot;
 
+	squareroot = 0;
 	while (squareroot * squareroot <= n)
 	{
 		if (squareroot * squareroot == n)
 			return (squareroot);
+		squareroot++;
 	}
 	return (-1);
 }
