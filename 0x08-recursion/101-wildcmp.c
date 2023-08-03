@@ -1,44 +1,26 @@
 #include "main.h"
-#include <string.h>
-int actual_wildcmp(char *s1, char *s2, int i);
-
 /**
- * wildcmp - returns the 1 if the strings is identical and 0 if its not
- * @s1: the first string
- * @s2: the second one
+ * wildcmp - compares two strings and returns 1
+ * if the strings can be considered identical,
+ * otherwise return 0.
+ * @s1: the normal string
+ * @s2: the special string containing "*"
  *
- * Return: the result
+ * Return: 1 if identical, else 0
  */
 int wildcmp(char *s1, char *s2)
 {
-	return (actual_wildcmp(s1, s2, 0));
-}
+	if (*s2 == '\0' && *s1 == '\0')
+		return (1);
 
-/**
- * actual_wildcmp - recurses to find if the 2 strings identical
- * @s1: the first string
- * @s2: the second one
- * @i: i
- *
- * Return: the result
- */
-int actual_wildcmp(char *s1, char *s2, int i)
-{
-	int length;
-
-	length = strlen(s2);
-	if (s2[i] == '*')
-	{
-		if (i == length)
-			return (1);
-		return (actual_wildcmp(s1, s2, i + 1));
-	}
-	if (s1[i] == s2[i])
-	{
-		if (i == length)
-			return (1);
-		return (actual_wildcmp(s1, s2, i + 1));
-	}
-	else
+	if (*s2 == '*' && *(s2 + 1) != '\0' && *s1 == '\0')
 		return (0);
+
+	if (*s1 == *s2)
+		return (wildcmp(s1 + 1, s2 + 1));
+
+	if (*s2 == '*')
+		return (wildcmp(s1, s2 + 1) || wildcmp(s1 + 1, s2));
+
+	return (0);
 }
