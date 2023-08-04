@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * main - Entry point
@@ -8,7 +9,7 @@
 */
 int main(int argc, char *argv[])
 {
-	int i, int firstdgt, int seconddgt, int mult;
+	int firstdgt, seconddgt, mult;
 
 	if (argc - 1 != 2)
 	{
@@ -18,7 +19,7 @@ int main(int argc, char *argv[])
 	else
 	{
 		firstdgt = atoi(argv[1]);
-		seconddgt = atpo(argv[2]);
+		seconddgt = atoi(argv[2]);
 		mult = firstdgt * seconddgt;
 		printf("%d\n", mult);
 	}
