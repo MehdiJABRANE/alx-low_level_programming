@@ -13,10 +13,12 @@ char *str_concat(char *s1, char *s2)
 {
 	int i, j;
 
+	if (s1 == NULL && s2 == NULL)
+		return (NULL);
 	if (s1 == NULL)
 	{
 		int length = strlen(s1);
-		char *newstr = (char *)malloc((strlen(s1) + 1) * sizeof(char));
+		char *newstr = (char *)malloc(strlen(s1) + 1 * sizeof(char));
 
 		for (i = 0; i < length; i++)
 			newstr[i] = s1[i];
@@ -25,7 +27,7 @@ char *str_concat(char *s1, char *s2)
 	if (s2 == NULL)
 	{
 		int length = strlen(s2);
-		char *newstr = (char *)malloc((strlen(s2) + 1) * sizeof(char));
+		char *newstr = (char *)malloc(strlen(s2) + 1 * sizeof(char));
 		
 		for (i = 0; i < length; i++)
 			newstr[i] = s2[i];
