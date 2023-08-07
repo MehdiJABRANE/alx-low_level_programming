@@ -11,51 +11,31 @@
 */
 char *str_concat(char *s1, char *s2)
 {
-	int i, j;
+	int i = 0, j = 0;
 
 	if (s1 == NULL && s2 == NULL)
 		return (NULL);
-	if (s1 == NULL)
-	{
-		int length = strlen(s1);
-		char *newstr = (char *)malloc(strlen(s1) + 1 * sizeof(char));
+	int length1 = strlen(s1), int length2 = strlen(s2);
+	
+	char *newstr = (char *)malloc((length1 + length2 + 1) * sizeof(char));
 
-		for (i = 0; i < length; i++)
-			newstr[i] = s1[i];
-		return (newstr);
-	}
-	if (s2 == NULL)
+	if (newstr == NULL)
 	{
-		int length = strlen(s2);
-		char *newstr = (char *)malloc(strlen(s2) + 1 * sizeof(char));
-		
-		for (i = 0; i < length; i++)
-			newstr[i] = s2[i];
-		return (newstr);
-        }
+		return (NULL);
+	}
 	else
 	{
-		int length1 = strlen(s1);
-		int length2 = strlen(s2);
-
-		char *newstr = (char *)malloc((length1 + length2 + 1) * sizeof(char));
-
-		if (newstr == NULL)
+		for (; i < length1; i++)
 		{
-			return (NULL);
+			newstr[i] = s1[i];
 		}
-		else
+		for (; j < length2; j++)
 		{
-			for (i = 0; i < length1; i++)
-			{
-				newstr[i] = s1[i];
-			}
-			for (j = 0; j < length2; j++)
-			{
-				newstr[i] = s2[j];
-				i++;
-			}
-			return (newstr);
+			newstr[i] = s2[j];
+			i++;
 		}
+		newstr[i] = '\0';
+		return (newstr);
 	}
+	
 }
