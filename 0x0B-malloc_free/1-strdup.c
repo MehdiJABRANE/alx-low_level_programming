@@ -1,39 +1,33 @@
-#include <stdio.h>
 #include <stdlib.h>
 #include "main.h"
-#include <string.h>
 
 /**
- * _strdup - A C function that creates an array
- * @str: the array of characters
- * Return: the array (success)
-*/
+ * *_strdup - copies the string given as parameter
+ * @str: string to duplicate
+ *
+ * Return: pointer to the copied string (Success), NULL (Error)
+ */
 char *_strdup(char *str)
 {
-	int i, length;
+	char *dup;
+	unsigned int i, len;
+
+	i = 0;
+	len = 0;
 
 	if (str == NULL)
-	{
 		return (NULL);
-	}
-	else
-	{
-		char *cpstr = (char *)malloc(strlen(str) * sizeof(char));
 
-		if (cpstr == NULL)
-		{
-			return (NULL);
-		}
-		else
-		{
-			length = strlen(str);
+	while (str[len])
+		len++;
 
-			for (i = 0; i < length; i++)
-			{
-				cpstr[i] = str[i];
-			}
-			cpstr[i] = '\0';
-			return (cpstr);
-		}
-	}
+	dup = malloc(sizeof(char) * (len + 1));
+
+	if (dup == NULL)
+		return (NULL);
+
+	while ((dup[i] = str[i]) != '\0')
+		i++;
+
+	return (dup);
 }
