@@ -10,7 +10,7 @@
 */
 char *_strdup(char *str)
 {
-	int i;
+	int i, length;
 
 	if (str == NULL)
 	{
@@ -26,7 +26,9 @@ char *_strdup(char *str)
 		}
 		else
 		{
-			for (i = 0; i < strlen(str); i++)
+			length = strlen(str);
+
+			for (i = 0; i < length; i++)
 			{
 				cpstr[i] = str[i];
 			}
