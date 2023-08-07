@@ -9,9 +9,9 @@
  */
 void free_grid(int **grid, int height)
 {
-	for (int i = 0; i < rows; i++)
+	for (int i = 0; i < height; i++)
 	{
-		free(matrix[i]);
+		free(grid[i]);
 	}
-	free(matrix);
+	free(grid);
 }
