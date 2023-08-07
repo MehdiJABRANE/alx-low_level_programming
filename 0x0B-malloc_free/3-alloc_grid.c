@@ -11,13 +11,18 @@
  */
 int **alloc_grid(int width, int height)
 {
+	int i;
+
 	if (width <= 0 || height <= 0)
 		return (NULL);
-	int i;
-	int **array = (int **)calloc(height * sizeof(int *));
+	else
+	{
+		int **array = (int **)calloc(height, sizeof(int *));
 
-	if (array == NULL)
-		return (NULL);
-	for (i = 0; i < width; i++)
-		array[i] = (int *)calloc(width * sizeof(int));
+		if (array == NULL)
+			return (NULL);
+		for (i = 0; i < width; i++)
+			array[i] = (int *)calloc(width, sizeof(int));
+		return (array);
+	}
 }
