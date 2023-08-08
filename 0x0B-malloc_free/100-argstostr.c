@@ -9,27 +9,35 @@
   *Return: NULL if ac == 0 or av == null, Pointer to new string.
   *NULL on fail.
   */
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
 char *argstostr(int ac, char **av)
 {
-	int i, j = 0;
+	int i, j, total_length = 0;
 
 	if (ac == 0 || av == NULL)
 	{
 		return (NULL);
 	}
-	else
+	for (i = 0; i < ac; i++)
 	{
-		char *arr = (char *)malloc(ac * sizeof(char));
-
-		if (arr == NULL)
-			return (NULL);
-		for (i = 0; i < ac; i++)
-		{
-			arr[j] = av[i];
-			j++;
-			arr[j] = '\n';
-			j++;
-		}
-		return (arr);
+		total_length += strlen(av[i]) + 1;
 	}
+	char *arr = (char *)malloc(total_length * sizeof(char));
+
+	if (arr == NULL)
+	{
+		return (NULL);
+	}
+	j = 0;
+	for (i = 0; i < ac; i++)
+	{
+		strcpy(arr + j, av[i]);
+		j += strlen(av[i]);
+		arr[j] = '\n';
+		j++;
+	}
+	return (arr);
 }
