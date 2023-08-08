@@ -30,6 +30,6 @@ char *argstostr(int ac, char **av)
 			arr[j] = '\n';
 			j++;
 		}
+		return (arr);
 	}
-	return (arr);
 }
