@@ -21,12 +21,12 @@ char *argstostr(int ac, char **av)
 	{
 		return (NULL);
 	}
+	char *arr = (char *)malloc(total_length * sizeof(char));
+	
 	for (i = 0; i < ac; i++)
 	{
 		total_length += strlen(av[i]) + 1;
 	}
-	char *arr = (char *)malloc(total_length * sizeof(char));
-
 	if (arr == NULL)
 	{
 		return (NULL);
