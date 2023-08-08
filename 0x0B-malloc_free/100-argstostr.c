@@ -21,6 +21,7 @@ char *argstostr(int ac, char **av)
 	{
 		return (NULL);
 	}
+
 	char *arr = (char *)malloc(total_length * sizeof(char));
 	
 	for (i = 0; i < ac; i++)
